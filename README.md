@@ -8,7 +8,9 @@ Los usuarios pueden consultar el catálogo (libros, autores, sagas, premios), pu
 - **Frontend:** React 19 · Vite · React Router · Axios · TanStack Query · CSS Modules (solo escritorio).
 - **Base de datos:** SQLite en desarrollo; preparado para PostgreSQL (ver [PostgreSQL](#migrar-a-postgresql)).
 
-Documentación adicional: [Arquitectura](docs/ARCHITECTURE.md) · [Roadmap técnico](docs/ROADMAP.md).
+Documentación adicional: [Arquitectura](docs/ARCHITECTURE.md) · [Roadmap técnico](docs/ROADMAP.md) · [Arranque manual del backend en Windows](docs/BACKEND_LOCAL.md).
+
+Documentos de referencia: [SDD](docs/SDD.md) · [ERD](docs/ERD.md) · [API](docs/API_SPEC.md) · [Arranque del frontend en Windows](docs/FRONTEND_LOCAL.md).
 
 ---
 

@@ -14,6 +14,7 @@ backend/db.sqlite3
 backend/staticfiles/
 backend/media/
 backend/logs/
+docs/SQL.md
 
 # Node
 node_modules/
