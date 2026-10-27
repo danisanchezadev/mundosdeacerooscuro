@@ -1,0 +1,66 @@
+.btn {
+  --c: var(--green);
+  --c-dim: var(--green-dark);
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--bg);
+  color: var(--c);
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 10px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: none;
+  /* pixel-art border: stepped corners */
+  box-shadow:
+    0 -4px 0 0 var(--c),
+    0 4px 0 0 var(--c),
+    -4px 0 0 0 var(--c),
+    4px 0 0 0 var(--c),
+    4px 8px 0 0 var(--c-dim);
+  margin: 4px 4px 8px;
+}
+
+.btn:hover:not(:disabled),
+.btn:focus-visible {
+  background: var(--c);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow:
+    0 -4px 0 0 var(--c),
+    0 4px 0 0 var(--c),
+    -4px 0 0 0 var(--c),
+    4px 0 0 0 var(--c);
+}
+
+.btn:disabled {
+  --c: var(--green-dark);
+  --c-dim: transparent;
+  cursor: not-allowed;
+}
+
+.amber {
+  --c: var(--amber);
+  --c-dim: var(--amber-dim);
+}
+
+.blue {
+  --c: var(--blue);
+  --c-dim: var(--blue-dim);
+}
+
+.red {
+  --c: var(--red);
+  --c-dim: #7a1f29;
+}
+
+.small {
+  font-size: 8px;
+  padding: 4px 10px;
+}

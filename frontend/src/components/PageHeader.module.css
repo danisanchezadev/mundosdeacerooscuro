@@ -1,0 +1,13 @@
+.header {
+  margin-bottom: 32px;
+}
+
+.title::before {
+  content: '> ';
+  color: var(--amber);
+}
+
+.subtitle {
+  color: var(--text-dim);
+  margin: 0;
+}

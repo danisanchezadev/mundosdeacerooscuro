@@ -1,0 +1,29 @@
+.panel {
+  position: relative;
+  background: var(--bg-panel);
+  border: 2px solid var(--green-dim);
+  box-shadow:
+    4px 4px 0 0 var(--green-dark),
+    inset 0 0 24px rgba(51, 255, 102, 0.05);
+  padding: 20px;
+}
+
+.amber {
+  border-color: var(--amber);
+  box-shadow: 4px 4px 0 0 var(--amber-dim);
+}
+
+.blue {
+  border-color: var(--blue);
+  box-shadow: 4px 4px 0 0 var(--blue-dim);
+}
+
+.title {
+  position: absolute;
+  top: -12px;
+  left: 14px;
+  margin: 0;
+  padding: 0 8px;
+  background: var(--bg);
+  font-size: 10px;
+}

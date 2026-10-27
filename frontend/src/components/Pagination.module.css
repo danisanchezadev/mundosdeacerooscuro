@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 28px 0 8px;
+}
+
+.info {
+  color: var(--text-dim);
+}

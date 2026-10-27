@@ -1,0 +1,40 @@
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.toolbar form {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  min-width: 420px;
+}
+
+.toolbar form > div {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.formWrap {
+  margin-bottom: 32px;
+  max-width: 760px;
+}
+
+.multi {
+  min-height: 140px;
+}
+
+.rowActions {
+  display: flex;
+  gap: 4px;
+}

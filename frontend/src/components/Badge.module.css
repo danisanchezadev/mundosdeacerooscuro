@@ -1,0 +1,25 @@
+.badge {
+  display: inline-block;
+  padding: 0 8px;
+  border: 2px solid var(--c, var(--green-dim));
+  color: var(--c, var(--green));
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: none;
+  white-space: nowrap;
+}
+
+.amber {
+  --c: var(--amber);
+}
+.blue {
+  --c: var(--blue);
+}
+.red {
+  --c: var(--red);
+}
+.dim {
+  --c: var(--green-dark);
+  color: var(--text-dim);
+}

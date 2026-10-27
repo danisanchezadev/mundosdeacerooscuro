@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Django
+backend/db.sqlite3
+backend/staticfiles/
+backend/media/
+backend/logs/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/coverage/
+frontend/.vite/
+
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Editores / SO
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

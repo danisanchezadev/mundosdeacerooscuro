@@ -1,0 +1,22 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 20px;
+  align-items: end;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.summary {
+  margin: 24px 0 20px;
+  color: var(--text-dim);
+}

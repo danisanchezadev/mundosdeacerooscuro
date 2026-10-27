@@ -1,0 +1,15 @@
+.wrap {
+  max-width: 520px;
+  margin: 24px auto 0;
+}
+
+.alt {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.divider {
+  margin: 8px 0 16px;
+  text-align: center;
+  color: var(--text-dim);
+}

@@ -1,0 +1,38 @@
+.box {
+  padding: 12px 16px;
+  border: 2px solid var(--red);
+  color: var(--red);
+  background: rgba(255, 77, 94, 0.08);
+  text-shadow: none;
+  margin-bottom: 16px;
+}
+
+.box::before {
+  content: '! ERROR: ';
+  font-family: var(--font-display);
+  font-size: 10px;
+}
+
+.empty {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--text-dim);
+}
+
+.empty::before {
+  content: '> ';
+  color: var(--amber);
+}
+
+.success {
+  padding: 12px 16px;
+  border: 2px solid var(--green);
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.success::before {
+  content: 'OK: ';
+  font-family: var(--font-display);
+  font-size: 10px;
+}

@@ -1,0 +1,145 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at center, rgba(51, 255, 102, 0.06) 0%, transparent 70%), var(--bg);
+}
+
+/* CRT scanlines + vignette. pointer-events none so it never blocks the UI. */
+.shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.28) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.shell::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 101;
+  pointer-events: none;
+  background: rgba(51, 255, 102, 0.025);
+  animation: flicker 6s steps(1) infinite;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  47% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.2;
+  }
+}
+
+.header {
+  border-bottom: 4px double var(--green-dim);
+  background: rgba(5, 8, 5, 0.92);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 24px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--green);
+  text-shadow: var(--glow-green);
+}
+
+.brand:hover {
+  text-decoration: none;
+  color: var(--amber);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.brandTag {
+  font-size: 16px;
+  color: var(--amber);
+  text-shadow: none;
+}
+
+.nav {
+  display: flex;
+  gap: 4px 20px;
+  flex-wrap: wrap;
+}
+
+.link {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text);
+  text-shadow: none;
+  padding: 6px 0;
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: var(--amber);
+}
+
+.active {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+.session {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.userName {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--blue);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.footer {
+  border-top: 4px double var(--green-dark);
+  padding: 20px 24px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 18px;
+}

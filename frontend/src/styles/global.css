@@ -1,0 +1,163 @@
+:root {
+  --bg: #050805;
+  --bg-panel: #091109;
+  --bg-raised: #0d1a0d;
+  --green: #33ff66;
+  --green-dim: #1c9a3f;
+  --green-dark: #0f4d20;
+  --amber: #ffb000;
+  --amber-dim: #8a5f00;
+  --blue: #2de2ff;
+  --blue-dim: #12687a;
+  --red: #ff4d5e;
+  --text: #b8ffc8;
+  --text-dim: #6fbf85;
+
+  --font-display: 'Press Start 2P', monospace;
+  --font-body: 'VT323', 'Courier New', monospace;
+
+  --px: 4px;
+  --glow-green: 0 0 6px rgba(51, 255, 102, 0.55);
+  --glow-amber: 0 0 6px rgba(255, 176, 0, 0.55);
+  --glow-blue: 0 0 6px rgba(45, 226, 255, 0.55);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  -webkit-font-smoothing: none;
+}
+
+body {
+  margin: 0;
+  min-width: 1100px; /* desktop only */
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1.25;
+  text-shadow: 0 0 3px rgba(51, 255, 102, 0.25);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: normal;
+  color: var(--green);
+  text-shadow: var(--glow-green);
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 15px;
+}
+h3 {
+  font-size: 12px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  text-shadow: var(--glow-blue);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--amber);
+  text-shadow: var(--glow-amber);
+  text-decoration: underline;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+::selection {
+  background: var(--green);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px dashed var(--amber);
+  outline-offset: 2px;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--green);
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-left: 2px solid var(--green-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-dim);
+  border: 2px solid var(--bg);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.muted {
+  color: var(--text-dim);
+}
+
+.amber {
+  color: var(--amber);
+  text-shadow: var(--glow-amber);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
